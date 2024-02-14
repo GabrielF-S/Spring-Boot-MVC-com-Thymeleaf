@@ -14,7 +14,7 @@
 	                    </li>
 	                </ul>
 				</div>
-	                <a class="btn btn-primary btn-md" href="/funcionarios/cadastrar" role="button">
+	                <a class="btn btn-primary btn-md" th:href="@{/funcionarios/cadastrar}" role="button">
 	                    <span class="oi oi-plus" title="Cadastro" aria-hidden="true"></span>
 	                    <span>Cadastrar Funcionários</span>
 	                </a>
@@ -88,19 +88,19 @@
 	
 	
 	            <div class="table-responsive">
-					<div th:replace="fragments/alert"></div>
+					<div th:replace="~{fragments/alert}"></div>
 	                <table class="table table-striped table-hover table-sm">
 	                    <thead>
 	                    <tr>
 	                        <th>#</th>
-	                        <th>Nome</th>
-	                        <th>Salário</th>
-	                        <th>Departamento</th>
-	                        <th>Cargo</th>
-	                        <th>Endereço</th>
-	                        <th>Data de Entrada</th>
-	                        <th>Data de Saída</th>
-	                        <th>Ação</th>
+	                        <th th:text="#{tabela.funcionario.col.nome}">Nome</th>
+	                        <th th:text="#{tabela.funcionario.col.salario}">Salário</th>
+	                        <th th:text="#{tabela.funcionario.col.departamento}">Departamento</th>
+	                        <th th:text="#{tabela.funcionario.col.cargo}">Cargo</th>
+	                        <th th:text="#{tabela.funcionario.col.endereco}">Endereço</th>
+	                        <th th:text="#{tabela.funcionario.col.dataEntrada}">Data de Entrada</th>
+	                        <th th:text="#{tabela.funcionario.col.dataSaida}">Data de Saída</th>
+	                        <th th:text="#{tabela.funcionario.col.acao}">Ação</th>
 	                    </tr>
 	                    </thead>
 	                    <tbody>
@@ -141,7 +141,7 @@
 	                </table>
 	            </div>
 	        </div>
-			<div th:replace="fragments/modal :: modal"></div>
+			<div th:replace="~{fragments/modal :: modal}"></div>
 	    </section>
 </body>
 </html>		

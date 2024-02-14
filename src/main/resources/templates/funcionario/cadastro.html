@@ -15,7 +15,7 @@
 	                        </li>
 	                    </ul>
 	                </div>
-	                <a class="btn btn-primary btn-md" href="@{/funcionarios/listar}" role="button">
+	                <a class="btn btn-primary btn-md" th:href="@{/funcionarios/listar}" role="button">
 	                    <span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
 	                    <span>Listar Funcionários</span>
 	                </a>
@@ -138,7 +138,7 @@
 	                    <div class="form-group col-md-2">
 	                        <label for="cep">Cep</label>
 	                        <input type="text" class="form-control" id="cep" data-mask="00000-000" th:field="*{endereco.cep}"
-								   th:classappend="${#fields.hasErrors('endereco.uf')} ? 'is-invalid'" />
+								   th:classappend="${#fields.hasErrors('endereco.cep')} ? 'is-invalid'" />
 	                        <div class="invalid-feedback">
 								<span th:errors="*{endereco.cep}"></span>
 	                        </div>
