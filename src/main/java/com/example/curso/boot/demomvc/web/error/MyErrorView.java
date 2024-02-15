@@ -11,7 +11,7 @@ import java.util.Map;
 public class MyErrorView implements ErrorViewResolver {
     @Override
     public ModelAndView resolveErrorView(HttpServletRequest request, HttpStatus status, Map<String, Object> map) {
-        ModelAndView model = new ModelAndView("/error");
+        ModelAndView model = new ModelAndView("error");
         model.addObject("status", status.value());
 
         switch (status.value()){

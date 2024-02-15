@@ -2,6 +2,7 @@ package com.example.curso.boot.demomvc.service;
 
 import com.example.curso.boot.demomvc.dao.CargoDao;
 import com.example.curso.boot.demomvc.domain.Cargo;
+import com.example.curso.boot.demomvc.util.PaginacaoUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,5 +52,10 @@ public class CargoServiceImpl implements CargoService{
             return  true;
         }
 
+    }
+
+    @Override
+    public PaginacaoUtil<Cargo> buscaPorPagina(int pagina) {
+        return dao.buscaPaginada(pagina);
     }
 }
